@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+        <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/jquery.fs.wallpaper.css" type="text/css">
+        <script src="js/tests/vendor/jquery.min.js"></script>
+        <script src="dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <header id="video-wallpaper">
+            <nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="" href="#"><img src="images/pickApizza.jpg"/a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#">Menu</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Order</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter2.jpg)"> 
+                </div>
+            </div>
+            <div class="row content-filler">                
+            </div>
+            <div class="row">
+                <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter1.jpg)"> 
+                </div>
+            </div>
+            <div class="row content-filler">
+            </div>
+            <div class="row">
+                <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter3.jpg)"> 
+                </div>
+            </div>
+            <div class="row content-filler">
+            </div>
+        </div>
+        <footer class="container-fluid">
+            <h1>FOOTER</h1>
+        </footer>
+        <script src="js/tests/vendor/classie.js"></script>
+        <script src="js/tests/vendor/cbpAnimatedHeader.js"></script>
+        <script src="js/tests/vendor/jquery.fs.wallpaper.js"></script>
+        <script>
+            $(function () {
+                $(window).on("load resize", function() {
+                    $('.fill-screen').css('height', window.innerHeight);
+                });
+            });
+        </script
+    </body>
+</html>

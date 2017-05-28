@@ -1,0 +1,50 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+  /*  padding-top: 80px;*/
+}
+
+html, body {
+    height: 100%;
+}
+footer {
+    background-color: #ce2b37;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    margin-bottom: 0;
+    padding: 10px 10px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    height: 70px;
+}
+
+.cbp-af-header-shrink {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    opacity: 0.75;
+}
+
+.navbar img {
+    width: 70%;
+    height: 70%;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #bbb;
+}
+
+.fill-screen {
+    background-size: cover;
+    background-position: center;
+}
+
+.content-filler {
+    min-height: 350px;
+}
+
+.fixed-attachment {
+    background-attachment: fixed;
+}
