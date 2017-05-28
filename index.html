@@ -25,29 +25,35 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#">Menu</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Order</a></li>
+                            <li><a class="page-scroll" href="#offer">Ofertas</a></li>
+                            <li><a class="page-scroll" href="#menu">Menu</a></li>
+                            <li><a class="page-scroll" href="#order">Pedido</a></li>
+                            <li><a class="page-scroll" href="#empresa">Empresa</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
         </header>
         <div class="container-fluid">
-            <div class="row">
+            <div class="row" id="offer">
                 <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter2.jpg)"> 
                 </div>
             </div>
             <div class="row content-filler">                
             </div>
-            <div class="row">
+            <div class="row" id="menu">
                 <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter1.jpg)"> 
                 </div>
             </div>
             <div class="row content-filler">
             </div>
-            <div class="row">
+            <div class="row" id="order">
+                <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter1.jpg)"> 
+                </div>
+            </div>
+            <div class="row content-filler">
+            </div>
+            <div class="row" id="empresa">
                 <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter3.jpg)"> 
                 </div>
             </div>
@@ -60,12 +66,6 @@
         <script src="js/tests/vendor/classie.js"></script>
         <script src="js/tests/vendor/cbpAnimatedHeader.js"></script>
         <script src="js/tests/vendor/jquery.fs.wallpaper.js"></script>
-        <script>
-            $(function () {
-                $(window).on("load resize", function() {
-                    $('.fill-screen').css('height', window.innerHeight);
-                });
-            });
-        </script
+        <script src="js/tests/vendor/main.js"></script>
     </body>
 </html>
