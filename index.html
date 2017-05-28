@@ -6,6 +6,7 @@
         <link href="css/jquery.fs.wallpaper.css" type="text/css">
         <script src="js/tests/vendor/jquery.min.js"></script>
         <script src="dist/js/bootstrap.min.js"></script>
+
     </head>
     <body>
         <header>
@@ -71,27 +72,43 @@
                         </div> 
                 </div>
             </div>
-            <div class="row content-filler">                
+            <div class="row content-filler" style="background-image: url(images/italia-bandera.jpg);background-size: cover">                
             </div>
             <div class="row" id="menu">
                 <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter1.png)"> 
                 </div>
             </div>
-            <div class="row content-filler">
+            <div class="row content-filler" style="background-image: url(images/italia-bandera.jpg);background-size: cover">
             </div>
             <div class="row" id="order">
                 <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter2.png)"> 
                 </div>
             </div>
-            <div class="row content-filler">
+            <div class="row content-filler" style="background-image: url(images/italia-bandera.jpg);background-size: cover">
             </div>
             <div class="row" id="empresa">
                 <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter3.png)"> 
                 </div>
             </div>
         </div>
-        <footer class="container-fluid">
-            <h1>FOOTER</h1>
+        <footer class="container-fluid" >
+            <div id="googleMap" class="googleMapsStyle" style="width:400px;height:200px;"></div>
+            <script>
+                function myMap() {
+                    var myLatLng = {lat: 37.7749300, lng: -122.4394200};
+
+                    var map = new google.maps.Map(document.getElementById('googleMap'), {
+                      zoom: 17,
+                      center: myLatLng
+                    });
+
+                    var marker = new google.maps.Marker({
+                      position: myLatLng,
+                      map: map
+                    });
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJBdh0q4mScWbNH20bYUxCZ4Ti5obeQnY&callback=myMap"></script>
         </footer>
         <script src="js/tests/vendor/classie.js"></script>
         <script src="js/tests/vendor/cbpAnimatedHeader.js"></script>
