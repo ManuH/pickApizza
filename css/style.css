@@ -7,7 +7,8 @@ html, body {
     height: 100%;
 }
 footer {
-    background-color: #ce2b37;
+    background-color: #2a2730;
+
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -42,9 +43,19 @@ footer {
 }
 
 .content-filler {
-    min-height: 350px;
+    min-height: 150px;
 }
 
 .fixed-attachment {
     background-attachment: fixed;
+}
+
+.googleMapsStyle {
+    margin: 20px;
+}
+
+@media screen and (max-width: 480px) {
+    .googleMapsStyle {
+        display: none;
+    }
 }
