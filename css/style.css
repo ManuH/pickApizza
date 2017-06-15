@@ -83,7 +83,7 @@ footer {
     width: 500px;
     margin: 0 auto;
     padding: 35px;
-    overflow: scroll;
+    overflow-y: scroll;
     opacity: 0.75;
 }
 
