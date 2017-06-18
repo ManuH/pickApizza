@@ -1,0 +1,74 @@
+{
+    "pizzas": [
+        {
+            "id": 1,
+            "name": "Cheese Pizza",
+            "ingredients": "Classic marinara sauce topped with mozzarella cheese.",
+            "mediumPrice": 11.99,
+            "largePrice": 14.99
+        },
+        {
+            "id": 2,
+            "name": "Pepperoni Pizza",
+            "ingredients": "Mozzarella cheese and pepperoni.",
+            "mediumPrice": 11.99,
+            "largePrice": 14.99
+        },
+        {
+            "id": 3,
+            "name": "Meat Lover's Pizza",
+            "ingredients": "Pepperoni, Italian sausage, ham, bacon, seasoned pork and beef.",
+            "mediumPrice": 11.99,
+            "largePrice": 14.99
+        },
+        {
+            "id": 4,
+            "name": "Supreme Pizza",
+            "ingredients": "Pepperoni, seasoned pork, beef, mushrooms, green bell peppers and red onions.",
+            "mediumPrice": 11.99,
+            "largePrice": 14.99
+        },
+        {
+            "id": 5,
+            "name": "Bacon Spinach Alfredo Pizza",
+            "ingredients": "Garlic Parmesan sauce topped with bacon, mushrooms and roasted spinach with a salted pretzel crust.",
+            "mediumPrice": 11.99,
+            "largePrice": 14.99
+        },
+        {
+            "id": 6,
+            "name": "Four Pepper Pepperoni Pizza",
+            "ingredients": "Premium crushed tomato sauce topped with pepperoni, jalapeño peppers, Peruvian cherry peppers, banana peppers and green bell peppers.",
+            "mediumPrice": 11.99,
+            "largePrice": 14.99
+        },
+        {
+            "id": 7,
+            "name": "Backyard BBQ Chicken Pizza",
+            "ingredients": "Barbeque sauce topped with grilled chicken, bacon and red onions with a toasted cheddar crust.",
+            "mediumPrice": 11.99,
+            "largePrice": 14.99
+        },
+        {
+            "id": 8,
+            "name": "Chicken-Bacon Parmesan Pizza",
+            "ingredients": "Garlic Parmesan sauce topped with grilled chicken, bacon and Roma tomatoes with a Parmesan crust.",
+            "mediumPrice": 11.99,
+            "largePrice": 14.99
+        },
+        {
+            "id": 9,
+            "name": "Veggie Lover's Pizza",
+            "ingredients": "Mushrooms, red onions, green bell peppers, Roma tomatoes and black olives.",
+            "mediumPrice": 11.99,
+            "largePrice": 14.99
+        },
+        {
+            "id": 10,
+            "name": "Premium Garden Veggie Pizza",
+            "ingredients": "Premium crushed tomato sauce topped with green peppers, red onions, mushrooms, Roma tomatoes and roasted spinach with our Hut Favorite on the crust.",
+            "mediumPrice": 11.99,
+            "largePrice": 14.99
+        }
+    ]
+}

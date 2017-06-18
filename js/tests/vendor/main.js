@@ -15,3 +15,77 @@ $(function () {
         $('.fill-screen').css('height', window.innerHeight);
     });
 });
+
+//read json file
+/*
+$.getJSON('data/pizzas.json', function(data) {
+    console.log(data);
+});
+*/
+$(document).ready(function() {
+
+    //data for pizza menu
+    $.ajax({
+            url: "data/pizzas.json",
+            dataType: 'json',
+            type: 'get',
+            cache: false,
+            success: function(data) {
+                $(data.pizzas).each(function(index, value) {
+                    $('#pizza-menu').prepend("<li>" + value.name + 
+                         " ..... " + "$" 
+                        + value.mediumPrice + "</li>"
+                        + "<li>" +  " (" + value.ingredients + ") " + "</li>");
+                });
+            }
+        });
+
+    // data for sides and drinks menu
+    $.ajax({
+            url: "data/sidesAndDrinks.json",
+            dataType: 'json',
+            type: 'get',
+            cache: false,
+            success: function(data) {
+                //sides
+                $(data.sides).each(function(index, value) {
+                    $('#sidesAndDrinks-menu').prepend("<li>" + value.name + 
+                         " ..... " + "$" 
+                        + value.price + "</li>"
+                        + "<li>" +  " (" + value.ingredients + ") " + "</li>");
+                });
+                //drinks
+                $(data.drinks).each(function(index, value) {
+                    $('#sidesAndDrinks-menu').prepend("<li>" + value.name + 
+                         " ..... " + "$" 
+                        + value.price + "</li>"
+                        + "<li>" +  " (" + value.ingredients + ") " + "</li>");
+                });
+            }
+        });
+
+    //data for pasta and wings menu
+    $.ajax({
+            url: "data/pastaAndWings.json",
+            dataType: 'json',
+            type: 'get',
+            cache: false,
+            success: function(data) {
+                //pasta
+                $(data.pasta).each(function(index, value) {
+                    $('#pastaAndWings-menu').prepend("<li>" + value.name + 
+                         " ..... " + "$" 
+                        + value.price + "</li>"
+                        + "<li>" +  " (" + value.ingredients + ") " + "</li>");
+                });
+                //wings
+                $(data.wings).each(function(index, value) {
+                    $('#pastaAndWings-menu').prepend("<li>" + value.name + 
+                         " ..... " + "$" 
+                        + value.price + "</li>"
+                        + "<li>" +  " (" + value.ingredients + ") " + "</li>");
+                });
+            }
+        });       
+})
+

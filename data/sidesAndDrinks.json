@@ -1,0 +1,54 @@
+{
+    "sides": [
+        {
+            "id": 1,
+            "name": "Stuffed Garlic Knots",
+            "ingredients": "10 large Garlic Knots stuffed with melted cheese and finished with a garlic buttery blend, grated parmesan and Italian herbs. Served with a dipping cup of marinara.",
+            "price": 5.99
+        },
+        {
+            "id": 2,
+            "name": "Breadsticks",
+            "ingredients": "Crispy on the outside, soft and chewy on the inside. Seasoned with garlic and parmesan and served with marinara dipping sauce.",
+            "price": 5.99
+        },
+        {
+            "id": 3,
+            "name": "Cheese Sticks",
+            "ingredients": "Fresh, oven-baked dough smothered with cheese and sprinkled with Italian seasoning. Served with marinara.",
+            "price": 5.99
+        },
+        {
+            "id": 4,
+            "name": "Fries",
+            "ingredients": "The bold, refreshing, robust cola.",
+            "price": 5.99
+        }
+    ],
+    "drinks": [
+        {
+            "id": 1,
+            "name": "Pepsi",
+            "ingredients": "The bold, refreshing, robust cola.",
+            "price": 3.99
+        },
+        {
+            "id": 2,
+            "name": "Diet Pepsi",
+            "ingredients": "Light. Crisp. Refreshing. With zero sugar, zero calories, and zero carbs.",
+            "price": 3.99
+        },
+        {
+            "id": 3,
+            "name": "Mountain Dew",
+            "ingredients": "Refreshes with a one-of-a-kind great taste.",
+            "price": 3.99
+        },
+        {
+            "id": 4,
+            "name": "Mist Twist",
+            "ingredients": "A crisp, refreshing & caffeine free Lemon-Lime flavor soda with a splash of real juice.",
+            "price": 3.99
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "pasta": [
+        {
+            "id": 1,
+            "name": "Tuscani Chicken Alfredo Pasta",
+            "ingredients": "Grilled chicken breast strips and rotini pasta baked in alfredo sauce with a layer of cheese. Served with an order of breadsticks. Serves 2.",
+            "price": 5.99
+        },
+        {
+            "id": 2,
+            "name": "Tuscani Meaty Marinara Pasta",
+            "ingredients": "Italian-seasoned meat sauce and rotini pasta topped with cheese. Served with an order of breadsticks. Serves 2",
+            "price": 5.99
+        }
+    ],
+    "wings": [
+        {
+            "id": 1,
+            "name": "Large Traditional Wings",
+            "ingredients": "Our classic juicy, meaty bone-in wings served perfectly crispy and tossed in sauce. Bigger. Better. Bolder",
+            "price": 3.99
+        },
+        {
+            "id": 2,
+            "name": "Breaded Bone-Out Wings",
+            "ingredients": "100% all-white meat chicken covered in savory breading, tossed in your choice of sauce.",
+            "price": 3.99
+        },
+        {
+            "id": 3,
+            "name": "Individual Wing Meal",
+            "ingredients": "6 - 8 WingStreet® Wings with your choice of sauce and an order of fries.",
+            "price": 3.99
+        },
+        {
+            "id": 4,
+            "name": "Family Wing Meal",
+            "ingredients": "12 - 16 WingStreet® Wings with your choice of two sauces and two orders of fries.",
+            "price": 3.99
+        },
+        {
+            "id": 5,
+            "name": "Party Wing Meal",
+            "ingredients": "18 - 24 WingStreet® Wings with your choice of three sauces and two orders of fries.",
+            "price": 3.99
+        }
+    ]
+}
