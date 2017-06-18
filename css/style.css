@@ -102,3 +102,11 @@ footer {
 footer ul {
     list-style-type: none; 
 }
+
+.showed {
+    display: inline;
+}
+
+#order {
+    color: black;
+}

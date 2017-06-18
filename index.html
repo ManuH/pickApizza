@@ -98,7 +98,33 @@
             <div class="row content-filler" style="background-image: url(images/italia-bandera.jpg);background-size: cover">
             </div>
             <div class="row" id="order">
-                <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter2.png)"> 
+                <div class="fill-screen fixed-attachment" style="background-image: url(images/pizzacenter2.png)">
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6 center-container">
+                            <form id="order">
+                                <select id="primary-opt">
+                                    <option value="select">Select an option</option>
+                                    <option value="pizza">Pizza</option>
+                                    <option value="pasta&wings">Pasta & Wings</option>
+                                    <option value="sides&drinks">Sides & Drinks</option>
+                                </select>
+                                <select class="hide" id="pizza-select">
+                                    <option value="select">Select an option</option>
+                                </select>
+                                <select class="hide" id="pastaAndWings">
+                                    <option value="select">Select an option</option>
+                                </select>
+                                <select class="hide" id="sidesAndDrinks">
+                                    <option value="select">Select an option</option>
+                                </select>
+                                <input type="text" class="hide" id="qty" value="Qty">
+                                <button class="hide" id="add2cart">Add to Chart</button>
+                                <button type="submit" class="hide">Make order</button>
+                            </form>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div> 
                 </div>
             </div>
             <div class="row content-filler" style="background-image: url(images/italia-bandera.jpg);background-size: cover">
