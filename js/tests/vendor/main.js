@@ -168,18 +168,68 @@ $(document).ready(function() {
 
                 default:
                     alert('please select an option');
+                    $("#sidesAndDrinks").attr('class', 'hide');
+                    $("#pizza-select").attr('class', 'hide');
+                    $("#pastaAndWings").attr('class', 'hide');
+                    $("#qty").attr('class', 'hide');
+                    $('#add2cart').attr('class', 'hide');
+                    $('submit').attr('class', 'hide');
             }
         })
 
         //show/hide add to cart button
-        $("#qty").change(function() {
-            console.log(this.val());
-            if (this.val() == null ) {
+        $("#qty").on("focus", function() {
+            $("#qty").val("");
+
+        });
+        $("#qty").on("change keyup paste click",function() {
+            var qty = $('#qty').val();
+            if ((qty == '' ) || (qty == 'Qty')) {
                 $("#add2cart").attr('class', 'hide');
             } else {
                 $("#add2cart").attr('class', 'showed');
             }
         })
         
+        $("#add2cart").on("click", function(event) {
+            event.preventDefault();
+            var opt = $("#primary-opt").val();
+            switch(opt) {
+                
+                case "pizza":
+                        var needle = $("#pizza-select").val();
+                    break;
+                case "pasta&wings":
+                        var needle = $("#pastaAndWings").val();
+                    break;
+                case "sides&drinks":
+                        var needle = $("#sidesAndDrinks").val();
+                    break;
+                default:
+                    alert("error! try again");
+            }
+
+            $.ajax({
+            url: "data/sidesAndDrinks.json",
+            dataType: 'json',
+            type: 'get',
+            cache: false,
+            success: function(data) {
+                //sides
+                $(data.sides).each(function(index, value) {
+                    if (value.name === needle) {
+                        console.log("success " + value.price);
+                    } else {
+                        $(data.drinks).each(function(index, value) {
+                            if (value.name === needle) {
+                                console.log('success b ' + value.price)
+                            }
+                        })
+                    }
+                });
+            }
+        });
+        })
 })
+
 

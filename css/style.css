@@ -84,6 +84,7 @@ footer {
     padding: 35px;
     overflow-y: scroll;
     opacity: 0.75;
+    text-align: center;
 }
 
 .container-menu {
@@ -93,6 +94,7 @@ footer {
     position: relative;
     height: 100%;
     padding: 35px;
+    overflow-y: scroll;
 }
 
 .container-menu ul {
@@ -109,4 +111,5 @@ footer ul {
 
 #order {
     color: black;
+    align-items: left;
 }

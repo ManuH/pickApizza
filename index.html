@@ -102,26 +102,48 @@
                     <div class="row">
                         <div class="col-sm-3"></div>
                         <div class="col-sm-6 center-container">
-                            <form id="order">
-                                <select id="primary-opt">
-                                    <option value="select">Select an option</option>
-                                    <option value="pizza">Pizza</option>
-                                    <option value="pasta&wings">Pasta & Wings</option>
-                                    <option value="sides&drinks">Sides & Drinks</option>
-                                </select>
-                                <select class="hide" id="pizza-select">
-                                    <option value="select">Select an option</option>
-                                </select>
-                                <select class="hide" id="pastaAndWings">
-                                    <option value="select">Select an option</option>
-                                </select>
-                                <select class="hide" id="sidesAndDrinks">
-                                    <option value="select">Select an option</option>
-                                </select>
-                                <input type="text" class="hide" id="qty" value="Qty">
-                                <button class="hide" id="add2cart">Add to Chart</button>
-                                <button type="submit" class="hide">Make order</button>
+                            <h1>MAKE YOUR ORDER!</h1>
+                            <form id="order" accept-charset="utf-8">
+                                <ul>
+                                    <li>                                       
+                                        <select id="primary-opt">
+                                            <option value="select">Select an option</option>
+                                            <option value="pizza">Pizza</option>
+                                            <option value="pasta&wings">Pasta & Wings</option>
+                                            <option value="sides&drinks">Sides & Drinks</option>
+                                        </select>
+                                    </li>
+                                    <li>                                    
+                                        <select class="hide" id="pizza-select">
+                                            <option value="select">Select an option</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select class="hide" id="pastaAndWings">
+                                            <option value="select">Select an option</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <select class="hide" id="sidesAndDrinks">
+                                            <option value="select">Select an option</option>
+                                        </select>
+                                    </li>
+                                    <li>
+                                        <input type="text" class="hide" id="qty" value="Qty">
+                                    </li>
+                                    <li>
+                                        <button class="hide" id="add2cart">Add to Chart</button>
+                                    </li>
+                                    <li>
+                                        <button type="submit" id="submit" class="hide">Make order</button>
+                                    </li>
+                                </ul>
                             </form>
+                            <div class="hide">
+                                <ul id="ticket">
+                                    <li id="total"></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="col-sm-3"></div>
                     </div> 
