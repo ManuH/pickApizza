@@ -17,11 +17,6 @@ $(function () {
 });
 
 //read json file
-/*
-$.getJSON('data/pizzas.json', function(data) {
-    console.log(data);
-});
-*/
 $(document).ready(function() {
 
     //data for pizza menu
@@ -142,10 +137,10 @@ $(document).ready(function() {
             }
         });
 
-        //show/hide select
+        
         $("#primary-opt").change(function() {
             var option = $(this).val();
-
+            //show/hide select
             switch(option) {
                 case "pizza":
                         $("#pizza-select").attr('class', 'showed');
@@ -191,44 +186,159 @@ $(document).ready(function() {
             }
         })
         
-        $("#add2cart").on("click", function(event) {
-            event.preventDefault();
-            var opt = $("#primary-opt").val();
-            switch(opt) {
+        //creating ticket
+        var order = {
+            total: 0,
+            list: ''
+        }
+        //search primary option
+        function getNeedle(opt) {
+                switch(opt) {
                 
-                case "pizza":
-                        var needle = $("#pizza-select").val();
-                    break;
-                case "pasta&wings":
-                        var needle = $("#pastaAndWings").val();
-                    break;
-                case "sides&drinks":
-                        var needle = $("#sidesAndDrinks").val();
-                    break;
-                default:
-                    alert("error! try again");
+                    case "pizza":
+                            var needle = $('#pizza-select').val();
+                        break;
+                    case "pasta&wings":
+                            var needle = $("#pastaAndWings").val();
+                        break;
+                    case "sides&drinks":
+                            var needle = $("#sidesAndDrinks").val();
+                        break;
+                    default:
+                        alert("error! try again");
+                }
+                return needle;
             }
+            var total = 0;
+        $('#add2cart').on('click', function(event) {
+            event.preventDefault();
+            var qty = $('#qty').val();
+            var opt = $('#primary-opt').val();
+            var needle = getNeedle(opt);
+            $('#ticket-div').attr('class','showed');
+            $('#submit').attr('class', 'showed');
+            //pizza data
+            $.ajax({
+                url: "data/pizzas.json",
+                dataType: 'json',
+                type: 'get',
+                cache: false,
+                    success: function(data) {
+                        //pizzas
+                        $(data.pizzas).each(function(index, value) {
+                            if (value.name === needle) {
+                                $('#ticket').prepend("<li>" + value.name + 
+                                " x" + qty + "......... $" + 
+                                (value.mediumPrice * qty) + "</li>");
+                                //add order to mail
+                                order.list +=  '' + value.name + 
+                                " x" + qty + "......... $" + 
+                                (value.mediumPrice * qty);
+                                total = total + (value.mediumPrice * qty);
+                                order.total += total;
+                                $('#total').html("Total: $" + total);
+                            }
+                        })
+                    }
+            })
 
+            //pasta and wings data
+            $.ajax({
+            url: "data/pastaAndWings.json",
+            dataType: 'json',
+            type: 'get',
+            cache: false,
+                success: function(data) {
+                    //pasta
+                    $(data.pasta).each(function(index, value) {
+                        if (value.name === needle) {
+                            $('#ticket').prepend("<li>" + value.name + 
+                                " x" + qty + "......... $" + 
+                                (value.price * qty) + "</li>");
+                                //add order to mail
+                                order.list +=  '' + value.name + 
+                                " x" + qty + "......... $" + 
+                                (value.price * qty);
+                                total = total + (value.price * qty);
+                                order.total += total;
+                            $('#total').html("Total: $" + total);
+                        }
+                    });
+                    //wings
+                    $(data.wings).each(function(index, value) {
+                        if (value.name == needle) {
+                            $('#ticket').prepend("<li>" + value.name + 
+                                " x" + qty + "......... $" + 
+                                (value.price * qty) + "</li>");
+                                //add order to mail
+                                order.list +=  '' + value.name + 
+                                " x" + qty + "......... $" + 
+                                (value.price * qty);
+                                total = total + (value.price * qty);
+                                order.total += total;
+                            $('#total').html("Total: $" + total);
+                        }                               
+                    });
+                }
+            });
+
+            //side and drink data
             $.ajax({
             url: "data/sidesAndDrinks.json",
             dataType: 'json',
             type: 'get',
             cache: false,
-            success: function(data) {
-                //sides
-                $(data.sides).each(function(index, value) {
-                    if (value.name === needle) {
-                        console.log("success " + value.price);
-                    } else {
-                        $(data.drinks).each(function(index, value) {
-                            if (value.name === needle) {
-                                console.log('success b ' + value.price)
-                            }
-                        })
-                    }
-                });
-            }
-        });
+                success: function(data) {
+                    //sides
+                    $(data.sides).each(function(index, value) {
+                        if (value.name === needle) {
+                            $('#ticket').prepend("<li>" + value.name + 
+                                " x" + qty + "......... $" + 
+                                (value.price * qty) + "</li>");
+                                //add order to mail
+                                order.list +=  '' + value.name + 
+                                " x" + qty + "......... $" + 
+                                (value.price * qty);
+                                total = total + (value.price * qty);
+                                order.total += total;
+                            $('#total').html("Total: $" + total);
+                        }
+                    });
+                    //drinks
+                    $(data.drinks).each(function(index, value) {
+                        if (value.name === needle) {
+                            $('#ticket').prepend("<li>" + value.name + 
+                                " x" + qty + "......... $" + 
+                                (value.price * qty) + "</li>");
+                                //add order to mail
+                                order.list +=  '' + value.name + 
+                                " x" + qty + "......... $" + 
+                                (value.price * qty);
+                                total = total + (value.price * qty);
+                                order.total += total;
+                            $('#total').html("Total: $" + total);
+                        }                               
+                    });
+                }
+            });
+        })
+
+        //email
+        $('#submit').on('click', function(event) {
+            event.preventDefault();
+            var data = {
+                order: order.list,
+                total: order.total
+            };
+            
+            $.ajax({
+                type: "POST",
+                url: "email.php",
+                data: data,
+                success: function() {
+                    alert("Thank you! Your order will arrive within 15-20 minutes!");                   
+                }
+            })
         })
 })
 

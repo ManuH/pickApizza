@@ -108,8 +108,14 @@ footer ul {
 .showed {
     display: inline;
 }
-
+.hide {
+    display: none;
+}
 #order {
     color: black;
     align-items: left;
+}
+
+#ticket {
+    overflow-y: scroll;
 }
